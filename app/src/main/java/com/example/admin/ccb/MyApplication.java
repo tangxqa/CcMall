@@ -3,7 +3,7 @@ package com.example.admin.ccb;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.multidex.MultiDex;
+//import android.support.multidex.MultiDex;
 import android.widget.ImageView;
 
 import com.example.admin.ccb.utils.GlideImageUtils;
@@ -13,8 +13,10 @@ import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 
-import cn.jzvd.Jzvd;
 import www.ccb.com.common.BaseApplication;
+
+//import cn.jzvd.Jzvd;
+//import www.ccb.com.common.BaseApplication;
 
 /**
  * @Author cuiChenBo
@@ -45,7 +47,7 @@ public class MyApplication extends BaseApplication {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        MultiDex.install(this);
+//        MultiDex.install(this);
     }
 
     /** Glide 加载 */

@@ -1,14 +1,26 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'com.alipay.portal'
+portal {
+    allSlinks true
+    mergeAssets true
+}
+apply plugin: 'com.alipay.apollo.baseline.update'
+mpaascomponents{
+// when you want exclude mpaas dependencies ,you can add dependency ga to to excludeDependencies
+// or set removed = true in mpaaspakcages.json
+      excludeDependencies=["com.alipay.android.phone.thirdparty:androidsupport-build","com.alipay.android.phone.thirdparty:androidsupportrecyclerview-build"]
+}
+
 android {
-    signingConfigs {
-        debug {
-            storeFile file('D:\\AndroidProject\\Demo_Cc\\CcMall\\ccmall.jks')
-            storePassword 'qwer1234'
-            keyPassword 'qwer1234'
-            keyAlias = 'CcMall'
-        }
-    }
+//    signingConfigs {
+//        debug {
+//            storeFile file('D:\\AndroidProject\\Demo_Cc\\CcMall\\ccmall.jks')
+//            storePassword 'qwer1234'
+//            keyPassword 'qwer1234'
+//            keyAlias = 'CcMall'
+//        }
+//    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.admin.ccb"
